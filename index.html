@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Mikkel Svartveit</title>
+    
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="start">
+        <div>
+            <img id="profile-image" src="/img/photos/portrait.jpg" alt="Mikkel Svartveit">
+            <h1>Mikkel Svartveit</h1>
+            <div id="social-icons">
+                <a href="https://facebook.com/profile.php?id=100006609016880" target="_blank"><img src="/img/icons/facebook-icon.png" title="Facebook" alt="Facebook"></a>
+                
+                <a href="https://twitter.com/mikkelsvartveit" target="_blank"><img src="/img/icons/twitter-icon.png" title="Twitter" alt="Twitter"></a>
+                
+                <a href="https://instagram.com/mikkelsvartveit" target="_blank"><img src="/img/icons/instagram-icon.png" title="Instagram" alt="Instagram"></a>
+                
+                <a href="https://vsco.co/mikkelsvartveit" target="_blank"><img src="/img/icons/vsco-icon.png" title="VSCO" alt="VSCO"></a>
+                
+                <a href="https://github.com/mikkelsvartveit" target="_blank"><img src="/img/icons/github-icon.png" title="GitHub" alt="GitHub"></a>
+            </div>
+        </div>
+        
+        <div id="menu">
+            <div class="menu-row">
+                <a href="#photography" class="card" onmouseover="this.firstElementChild.src = '/img/icons/photography-color.png';" onmouseout="this.firstElementChild.src = '/img/icons/photography.png';">
+                    <img src="/img/icons/photography.png" alt="Photography">
+                    <h3>Photography</h3>
+                </a>
+                
+                <a href="#development" class="card" onmouseover="this.firstElementChild.src = '/img/icons/development-color.png';" onmouseout="this.firstElementChild.src = '/img/icons/development.png';">
+                    <img src="/img/icons/development.png" alt="Development">
+                    <h3>Development</h3>
+                </a>
+            </div>
+            
+            <div class="menu-row">
+                <a href="#cubing" class="card" onmouseover="this.firstElementChild.src = '/img/icons/speedcubing-color.png';" onmouseout="this.firstElementChild.src = '/img/icons/speedcubing.png';">
+                    <img src="/img/icons/speedcubing.png" alt="Rubik's Cube">
+                    <h3>Speedcubing</h3>
+                </a>
+                
+                <a href="#about" class="card" onmouseover="this.firstElementChild.src = '/img/icons/contact-color.png';" onmouseout="this.firstElementChild.src = '/img/icons/contact.png';">
+                    <img src="/img/icons/contact.png" alt="About/Contact">
+                    <h3>About/Contact</h3>
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="section section-dark" id="photography">
+        <h2>Photography</h2>
+        
+        <div id="photos-grid">
+            <img class="grid-row-2" src="/img/photos/116.jpg">
+            <img src="/img/photos/117.jpg">
+            <img src="/img/photos/96.jpg">
+            <img class="grid-row-2" src="/img/photos/98.jpg">
+            <img src="/img/photos/85.jpg">
+            <img src="/img/photos/53.jpg">
+        </div>
+        
+        <div class="center">
+            <a class="button-link button-link-dark center" href="https://instagram.com/mikkelphoto_" target="_blank">
+                <img src="/img/icons/instagram-icon-light.png" alt="Instagram">
+                More on Instagram
+            </a>
+        </div>
+    </div>
+    
+    <div class="section" id="development">
+        <h2>Development</h2>
+        
+        <div class="content">
+            <!--<p>Here is an overview of my notable programming/web development projects.</p>
+
+            <a href="https://github.com/mikkelsvartveit" class="button-link">
+                <img src="/img/icons/github-icon-light.png" target="_blank" alt="GitHub">
+                More on GitHub
+            </a>-->
+            
+            <div class="flexbox">
+                <div class="dev-project">
+                    <img src="/img/icons/glossary-tester-banner.png" alt="Glossary Tester">
+                    
+                    <h3>Glossary tester</h3>
+                    
+                    <p>A web app for learning and practicing glossary.</p>
+                    
+                    <div class="stack">
+                        <a href="http://glossary.mikkelsvartveit.com" target="_blank" class="button-link">
+                            <img src="/img/icons/website-icon.png" alt="Glossary Tester">
+                            Visit website
+                        </a>
+                        <a href="https://github.com/mikkelsvartveit/glossary-tester" target="_blank" class="button-link">
+                            <img src="/img/icons/github-icon.png" alt="GitHub">
+                            Code on GitHub
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="dev-project">
+                    <img src="/img/icons/personal-website-banner.png" alt="Glossary Tester">
+                    
+                    <h3>Personal website</h3>
+                    
+                    <p>The website you are looking at right now.</p>
+                    
+                    <div class="stack">
+                        <a href="http://mikkelsvartveit.com" target="_blank" class="button-link">
+                            <img src="/img/icons/website-icon.png" alt="Glossary Tester">
+                            Visit website
+                        </a>
+                        <a href="https://github.com/mikkelsvartveit/personal-website" target="_blank" class="button-link">
+                            <img src="/img/icons/github-icon.png" alt="GitHub">
+                            Code on GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="section section-dark" id="cubing">
+        <h2>Speedcubing</h2>
+        <div class="flexbox content">
+            <div>
+                <p>Speedcubing is all about solving the <b>Rubik's cube</b> as quickly as possible. I first learnt how to solve the  cube in 2014, and today I can do it in around <b>10 seconds</b>. I am ranked <b>top 10</b> in Norway in both the classic 3x3 cube, the smaller 2x2 variant as well as in one-handed solving.</p>
+                
+                <div class="align">
+                    <a href="https://www.worldcubeassociation.org/persons/2014SVAR02" class="button-link" target="_blank">
+                        <img src="/img/icons/wca-logo.svg" alt="WCA">
+                        Records/rankings
+                    </a>
+
+                    <a href="https://www.youtube.com/channel/UCiJ7FdLKJSpGs1pqjqd7VnA" class="button-link" target="_blank">
+                        <img src="/img/icons/youtube-logo.png" alt="YouTube">
+                        More videos
+                    </a>
+                </div>
+            </div>
+            
+            <div>
+                <iframe width="544" height="306" src="https://www.youtube.com/embed/3ccaVLiHrYs?loop=1&color=white&modestbranding=1&rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+    
+    <div class="section section-darker" id="about">        
+        <div class="flexbox content">
+            <div>
+                <h2>About</h2>
+                
+                <p>Hi! My name is Mikkel and I am an 18-year-old high school student from Norway. I am currently taking science classes, and I am aiming for a career within Computer Science. I have been interested in computers and coding since I was a kid, and over the years I have taught myself the basics of web development with HTML, CSS, JavaScript and PHP. I have also dabbled a bit in other programming languages such as Java and Python. Other hobbies of mine include tennis, photography and speedcubing.</p>
+            </div>
+            
+            <div>
+                <h2>Contact</h2>
+                
+                <p>Do you have a question? Let me know.</p>
+                
+                <div class="stack">
+                    <a href="mailto:mail@mikkelsvartveit.com" target="_blank" class="button-link">
+                        <img src="/img/icons/email-icon.png" alt="Email">
+                        mail@mikkelsvartveit.com
+                    </a>
+                    
+                    <a href="https://www.facebook.com/messages/t/100006609016880" target="_blank" class="button-link">
+                        <img src="/img/icons/facebook-icon.png" alt="Facebook">
+                        Send message
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <a id="top-button" class="hidden" href="#start">
+        <img src="/img/icons/up-arrow.png" alt="Go to top">
+    </a>
+    
+    <script src="/js/main.js"></script>
+</body>
+</html>
