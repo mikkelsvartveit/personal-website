@@ -1,32 +1,48 @@
+// Function for closing the fullscreen photo view
+function closePhoto() {
+    // Applying the 'hidden' class to make the elements hidden
+    document.getElementById("dim").classList = "hidden";
+    document.getElementById("photo-fullscreen").classList = "hidden";
+    
+    // Clears the src attribute to make sure the previous photo doesn't show
+    document.getElementById("photo-fullscreen").children[0].setAttribute("src", "");
+}
+
+// EVENT LISTENERS:
+
+// Makes the scroll-to-top button show and hide automatically
 window.addEventListener("scroll", function() {
     var topButton = document.getElementById("top-button");
     var scrollPosition = window.scrollY;
     var windowHeight = window.innerHeight;
         
     if(scrollPosition > windowHeight / 4) {
+        // Removing the 'hidden' class to make the button visible
         topButton.classList = "";
     } else {
+        // Applying the 'hidden' class to make the button hidden
         topButton.classList = "hidden";
     }
 });
 
+// Makes clicking on a photo show it in fullscreen view
 var photoElements = document.getElementById("photos-grid").children;
 for(var i = 0; i < photoElements.length; i++) {
     photoElements[i].addEventListener("click", function(){
+        // Changes URL to load the images with higher resolutions
         var photoUrl = this.getAttribute("src").replace("/thumbs/", "/photos/");
+        
         var fullscreenPhoto = document.getElementById("photo-fullscreen");
         fullscreenPhoto.children[0].setAttribute("src", photoUrl);
+        
+        // Removing the 'hidden' class to make the elements visible
         document.getElementById("dim").classList = "";
         fullscreenPhoto.classList = "";
     });
 }
 
+// Closes the fullscreen view when clicking on the X in the top-right corner
 document.getElementById("closePhotoButton").addEventListener("click", closePhoto);
 
+// Closes the fullscreen view when clicking anywhere outside the photo
 document.getElementById("dim").addEventListener("click", closePhoto);
-
-function closePhoto() {
-    document.getElementById("dim").classList = "hidden";
-    document.getElementById("photo-fullscreen").classList = "hidden";
-    document.getElementById("photo-fullscreen").children[0].setAttribute("src", "#");
-}
