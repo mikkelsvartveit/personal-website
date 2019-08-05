@@ -10,18 +10,30 @@ function closePhoto() {
 
 // EVENT LISTENERS:
 
+// Makes anchor links scroll smoothly
+var anchors = document.querySelectorAll('a[href^="#"]');
+for(var i = 0; i < anchors.length; i++) {
+    anchors[i].addEventListener("click", function(event) {
+        event.preventDefault();
+        
+        document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+}
+
 // Makes the scroll-to-top button show and hide automatically
 window.addEventListener("scroll", function() {
     var topButton = document.getElementById("top-button");
-    var scrollPosition = window.scrollY;
+    var scrollPosition = window.pageYOffset;
     var windowHeight = window.innerHeight;
         
     if(scrollPosition > windowHeight / 4) {
         // Removing the 'hidden' class to make the button visible
-        topButton.classList = "";
+        topButton.className = "";
     } else {
         // Applying the 'hidden' class to make the button hidden
-        topButton.classList = "hidden";
+        topButton.className = "hidden";
     }
 });
 
