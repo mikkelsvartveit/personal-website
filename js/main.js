@@ -8,6 +8,24 @@ function closePhoto() {
     document.getElementById("photo-fullscreen").children[0].setAttribute("src", "");
 }
 
+// Function to avoid fullscreen photo view from overflowing the window
+function resizePhoto() {
+    var photoFullscreen = document.getElementById("photo-fullscreen");
+    var photoElement = photoFullscreen.children[0];
+    
+    var photoWidth = photoElement.clientWidth;
+    var photoHeight = photoElement.clientHeight;
+    var windowWidth = window.innerWidth;
+    var windowHeight = window.innerHeight;
+
+    if(photoWidth/photoHeight > windowWidth/windowHeight) {
+        console.log("yes");
+        photoFullscreen.classList.add("portrait-fix");
+    } else {
+        photoFullscreen.classList.remove("portrait-fix");
+    }
+}
+
 // EVENT LISTENERS:
 
 // Makes anchor links scroll smoothly
@@ -50,6 +68,9 @@ for(var i = 0; i < photoElements.length; i++) {
         // Removing the 'hidden' class to make the elements visible
         document.getElementById("dim").classList = "";
         fullscreenPhoto.classList = "";
+        
+        // Calculates proportions after image is fully loaded
+        fullscreenPhoto.children[0].addEventListener("load", resizePhoto);
     });
 }
 
@@ -58,3 +79,6 @@ document.getElementById("closePhotoButton").addEventListener("click", closePhoto
 
 // Closes the fullscreen view when clicking anywhere outside the photo
 document.getElementById("dim").addEventListener("click", closePhoto);
+
+// Re-calculates fullscreen view dimensions when window is resized
+window.addEventListener('resize', resizePhoto);
