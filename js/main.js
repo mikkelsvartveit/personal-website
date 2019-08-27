@@ -64,13 +64,15 @@ for(var i = 0; i < photoElements.length; i++) {
         
         var fullscreenPhoto = document.getElementById("photo-fullscreen");
         fullscreenPhoto.children[0].setAttribute("src", photoUrl);
+        document.getElementById("dim").classList = "";
+        document.getElementById("loading-icon").classList = "";
         
         // Calculates proportions after image is fully loaded
         fullscreenPhoto.children[0].addEventListener("load", function() {
             // Removing the 'hidden' class to make the elements visible
-            document.getElementById("dim").classList = "";
             fullscreenPhoto.classList = "";
             resizePhoto();
+            document.getElementById("loading-icon").classList = "hidden";
         });
     });
 }
