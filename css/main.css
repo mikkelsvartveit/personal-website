@@ -29,6 +29,12 @@ h2 {
     margin-bottom: 40px;
 }
 
+@media only screen and (max-width: 992px) {
+    h2 {
+        font-size: 32px;
+    }
+}
+
 b {
     font-weight: 600;
 }
@@ -88,7 +94,7 @@ iframe {
 }
 
 .button-link {
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 500;
     color: #444;
     background-color: #fff;
@@ -309,23 +315,25 @@ iframe {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 14vw);
-    grid-gap: 20px;
-    margin: 0 15px 40px 15px;
+    grid-gap: 1vw;
+    margin: 0 2vw 3vw 2vw;
 }
 
 @media only screen and (max-width: 992px) {
     #photos-grid {
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(4, 27vw);
+        grid-template-rows: repeat(4, 28vw);
+        grid-gap: 2.5vw;
+        margin: 0 2vw 5vw 2vw;
     }
 }
 
 @media only screen and (max-width: 600px) {
     #photos-grid {
         grid-template-columns: repeat(1, 1fr);
-        grid-template-rows: repeat(8, 54vw);
-        grid-gap: 30px;
-        margin: 0 25px 40px 25px;
+        grid-template-rows: repeat(8, 53vw);
+        grid-gap: 5vw;
+        margin: 0 6vw 9vw 6vw;
     }
 }
 
@@ -344,6 +352,12 @@ iframe {
 
 #photos-grid .grid-row-2 {
     grid-row: span 2;
+}
+
+@media only screen and (max-width: 370px) {
+    #email-button {
+        font-size: 12px;
+    }
 }
 
 #dim {
@@ -413,23 +427,6 @@ iframe {
     top: 2vw;
     right: 6vw;
 }
-
-/*@media only screen and (max-aspect-ratio: 1/1) {
-    #photo-fullscreen {
-        width: 100%;
-        height: auto;
-        padding: 0 4vw;
-    }
-    
-    #photo-fullscreen img {
-        width: 100%;
-    }
-    
-    #photo-fullscreen #closePhotoButton {
-        top: 2vw;
-        right: 6vw;
-    }
-}*/
 
 #top-button {
     position: fixed;
