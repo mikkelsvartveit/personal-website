@@ -3,9 +3,10 @@ function closePhoto() {
     // Applying the 'hidden' class to make the elements hidden
     document.getElementById("dim").classList = "hidden";
     document.getElementById("photo-fullscreen").classList = "hidden";
+    document.getElementById("closePhotoButton").classList = "hidden";
     
     // Clears the src attribute to make sure the previous photo doesn't show
-    document.getElementById("photo-fullscreen").children[0].setAttribute("src", "");
+    document.getElementById("photo-fullscreen").children[0].setAttribute("src", "data:,");
 }
 
 // Function to avoid fullscreen photo view from overflowing the window
@@ -67,11 +68,14 @@ for(var i = 0; i < photoElements.length; i++) {
         document.getElementById("dim").classList = "";
         document.getElementById("loading-icon").classList = "";
         
-        // Calculates proportions after image is fully loaded
+        // Runs after image is fully loaded
         fullscreenPhoto.children[0].addEventListener("load", function() {
-            // Removing the 'hidden' class to make the elements visible
+            // Removing the 'hidden' class to make the image visible
             fullscreenPhoto.classList = "";
+            document.getElementById("closePhotoButton").classList = "";
+            // Recalculates image proportions
             resizePhoto();
+            // Applying the 'hidden' class to make the loading icon hidden
             document.getElementById("loading-icon").classList = "hidden";
         });
     });
