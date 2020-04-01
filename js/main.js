@@ -4,7 +4,7 @@ function closePhoto() {
     document.getElementById("dim").classList = "hidden";
     document.getElementById("photo-fullscreen").classList = "hidden";
     document.getElementById("closePhotoButton").classList = "hidden";
-    
+
     // Clears the src attribute to make sure the previous photo doesn't show
     document.getElementById("photo-fullscreen").children[0].setAttribute("src", "data:,");
 }
@@ -13,14 +13,13 @@ function closePhoto() {
 function resizePhoto() {
     var photoFullscreen = document.getElementById("photo-fullscreen");
     var photoElement = photoFullscreen.children[0];
-    
+
     var photoWidth = photoElement.clientWidth;
     var photoHeight = photoElement.clientHeight;
     var windowWidth = window.innerWidth;
     var windowHeight = window.innerHeight;
 
-    if(photoWidth/photoHeight > windowWidth/windowHeight) {
-        console.log("yes");
+    if (photoWidth / photoHeight > windowWidth / windowHeight) {
         photoFullscreen.classList.add("portrait-fix");
     } else {
         photoFullscreen.classList.remove("portrait-fix");
@@ -31,10 +30,10 @@ function resizePhoto() {
 
 // Makes anchor links scroll smoothly
 var anchors = document.querySelectorAll('a[href^="#"]');
-for(var i = 0; i < anchors.length; i++) {
-    anchors[i].addEventListener("click", function(event) {
+for (var i = 0; i < anchors.length; i++) {
+    anchors[i].addEventListener("click", function (event) {
         event.preventDefault();
-        
+
         document.querySelector(this.getAttribute("href")).scrollIntoView({
             behavior: 'smooth'
         });
@@ -42,12 +41,12 @@ for(var i = 0; i < anchors.length; i++) {
 }
 
 // Makes the scroll-to-top button show and hide automatically
-window.addEventListener("scroll", function() {
+window.addEventListener("scroll", function () {
     var topButton = document.getElementById("top-button");
     var scrollPosition = window.pageYOffset;
     var windowHeight = window.innerHeight;
-        
-    if(scrollPosition > windowHeight / 4) {
+
+    if (scrollPosition > windowHeight / 4) {
         // Removing the 'hidden' class to make the button visible
         topButton.className = "";
     } else {
@@ -57,19 +56,19 @@ window.addEventListener("scroll", function() {
 });
 
 // Makes clicking on a photo show it in fullscreen view
-var photoElements = document.getElementById("photos-grid").children;
-for(var i = 0; i < photoElements.length; i++) {
-    photoElements[i].addEventListener("click", function(){
+var photoElements = document.getElementById("photos-grid").firstElementChild.children;
+for (var i = 0; i < photoElements.length; i++) {
+    photoElements[i].addEventListener("click", function () {
         // Changes URL to load the images with higher resolutions
         var photoUrl = this.getAttribute("src").replace("/thumbs/", "/photos/");
-        
+
         var fullscreenPhoto = document.getElementById("photo-fullscreen");
         fullscreenPhoto.children[0].setAttribute("src", photoUrl);
         document.getElementById("dim").classList = "";
         document.getElementById("loading-icon").classList = "";
-        
+
         // Runs after image is fully loaded
-        fullscreenPhoto.children[0].addEventListener("load", function() {
+        fullscreenPhoto.children[0].addEventListener("load", function () {
             // Removing the 'hidden' class to make the image visible
             fullscreenPhoto.classList = "";
             document.getElementById("closePhotoButton").classList = "";
@@ -81,6 +80,7 @@ for(var i = 0; i < photoElements.length; i++) {
     });
 }
 
+
 // Closes the fullscreen view when clicking on the X in the top-right corner
 document.getElementById("closePhotoButton").addEventListener("click", closePhoto);
 
@@ -88,4 +88,16 @@ document.getElementById("closePhotoButton").addEventListener("click", closePhoto
 document.getElementById("dim").addEventListener("click", closePhoto);
 
 // Re-calculates fullscreen view dimensions when window is resized
-window.addEventListener('resize', resizePhoto);
+window.addEventListener("resize", resizePhoto);
+
+// Expands and collapses photo grid
+document.getElementById("expand-button").addEventListener("click", function () {
+    document.getElementById('photos-grid').classList.toggle('collapsed');
+    this.classList.toggle("rotated");
+
+    /* if (document.getElementById('photos-grid').classList.contains('collapsed')) {
+        document.getElementById("photography").scrollIntoView({
+            behavior: 'smooth'
+        });
+    } */
+});

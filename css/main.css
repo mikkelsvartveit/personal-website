@@ -80,7 +80,7 @@ iframe {
     margin-top: 40px;
 }
 
-.align > * {
+.align>* {
     margin: 10px 15px 20px 15px;
 }
 
@@ -90,7 +90,7 @@ iframe {
     align-items: stretch;
 }
 
-.stack > * {
+.stack>* {
     margin: 10px 0 10px 0;
 }
 
@@ -133,7 +133,7 @@ iframe {
     padding: 20px 5% 50px 5%;
 }
 
-.section > .flexbox > div {
+.section>.flexbox>div {
     margin: 0 2vw;
 }
 
@@ -190,11 +190,11 @@ iframe {
     .menu-row {
         flex-direction: column;
     }
-    
+
     .card {
         padding: 15px 20px;
     }
-    
+
     .card img {
         min-width: 0;
         width: 50px;
@@ -202,7 +202,7 @@ iframe {
         float: left;
         vertical-align: center;
     }
-    
+
     .card h3 {
         line-height: 50px;
         margin-left: 20px;
@@ -215,11 +215,11 @@ iframe {
         padding: 10px 20px 10px 15px;
         margin: 10px;
     }
-    
+
     .card img {
         width: 40px;
     }
-    
+
     .card h3 {
         font-size: 16px;
         line-height: 40px;
@@ -235,11 +235,11 @@ iframe {
     box-shadow: 0px 1px 5px 0px #888;
 }
 
-.dev-project > * {
+.dev-project>* {
     margin: 15px 20px 15px 20px;
 }
 
-.dev-project > img {
+.dev-project>img {
     width: 100%;
     margin: 0;
 }
@@ -295,7 +295,7 @@ iframe {
     box-sizing: border-box;
 }
 
-#start > div {
+#start>div {
     box-sizing: border-box;
     margin: 20px 0;
     padding: 0 30px;
@@ -305,24 +305,64 @@ iframe {
     #start {
         flex-direction: column;
     }
-    
-    #start > div {
+
+    #start>div {
         padding: 0;
     }
 }
 
 #photos-grid {
+    position: relative;
+    max-height: 60vw;
+    padding-top: 10px;
+    overflow: hidden;
+    transition: 0.8s max-height, 0.8s padding;
+}
+
+#photos-grid.collapsed {
+    max-height: 30vw;
+    padding-bottom: 8vw;
+}
+
+#photos-grid:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    pointer-events: none;
+    background-image: linear-gradient(to bottom,
+            rgba(68, 68, 68, 0),
+            rgba(68, 68, 68, 1) 90%);
+    width: 100%;
+    height: 100px;
+    opacity: 0;
+    transition: 0.8s opacity;
+}
+
+#photos-grid.collapsed:after {
+    opacity: 1;
+}
+
+#photos-grid div {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, 14vw);
+    grid-template-rows: repeat(4, 14vw);
     grid-gap: 1vw;
     margin: 0 2vw 3vw 2vw;
 }
 
 @media only screen and (max-width: 992px) {
     #photos-grid {
+        max-height: 244vw;
+    }
+
+    #photos-grid.collapsed {
+        max-height: 70vw;
+    }
+
+    #photos-grid div {
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(4, 28vw);
+        grid-template-rows: repeat(8, 28vw);
         grid-gap: 2.5vw;
         margin: 0 2vw 5vw 2vw;
     }
@@ -330,8 +370,16 @@ iframe {
 
 @media only screen and (max-width: 600px) {
     #photos-grid {
+        max-height: 928vw;
+    }
+
+    #photos-grid.collapsed {
+        max-height: 190vw;
+    }
+
+    #photos-grid div {
         grid-template-columns: repeat(1, 1fr);
-        grid-template-rows: repeat(8, 53vw);
+        grid-template-rows: repeat(16, 53vw);
         grid-gap: 5vw;
         margin: 0 6vw 9vw 6vw;
     }
@@ -343,7 +391,7 @@ iframe {
     object-fit: cover;
     box-shadow: 0px 0px 10px 0px #000;
     cursor: pointer;
-    transition-duration: 0.1s;
+    transition-duration: 0.0.8s;
 }
 
 #photos-grid img:hover {
@@ -352,6 +400,22 @@ iframe {
 
 #photos-grid .grid-row-2 {
     grid-row: span 2;
+}
+
+#expand-button img {
+    width: 60px;
+    margin-top: 40px;
+    transition: 0.4s transform;
+}
+
+@media only screen and (max-width: 992px) {
+    #expand-button img {
+        width: 50px;
+    }
+}
+
+#expand-button.rotated img {
+    transform: rotateX(180deg);
 }
 
 @media only screen and (max-width: 370px) {
@@ -439,6 +503,7 @@ iframe {
     background-color: #555;
     border-radius: 50%;
     box-shadow: 0px 0px 10px 0px #000;
+    z-index: 2;
     transition-duration: 0.2s;
 }
 
@@ -451,21 +516,23 @@ iframe {
 }
 
 @media only screen and (max-width: 992px) {
-    #cubing > .flexbox, #about > .flexbox {
+
+    #cubing>.flexbox,
+    #about>.flexbox {
         flex-direction: column;
     }
-    
+
     #cubing .iframe-container {
         margin-top: 30px;
         margin-left: auto;
         margin-right: auto;
     }
-    
+
     #cubing iframe {
         width: 80vw;
         height: calc(80vw / 1.778);
     }
-    
+
     #contact {
         margin: auto;
     }

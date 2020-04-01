@@ -3,13 +3,15 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="description" content="Mikkel Svartveit - photographer, developer and speedcuber.">
+    <meta name="keywords" content="Mikkel,Svartveit,developer,development,photographer,photography,speedcuber,speedcubing,cubing">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Mikkel Svartveit</title>
 
     <link rel="stylesheet" href="css/main.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600&display=swap" rel="stylesheet">
-    
+
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
 </head>
@@ -62,20 +64,29 @@
     <div class="section section-dark" id="photography">
         <h2>Photography</h2>
 
-        <div id="photos-grid">
-            <img class="grid-row-2" src="/img/thumbs/116.jpg" alt="">
-            <img src="/img/thumbs/117.jpg" alt="">
-            <img src="/img/thumbs/96.jpg" alt="">
-            <img class="grid-row-2" src="/img/thumbs/98.jpg" alt="">
-            <img src="/img/thumbs/85.jpg" alt="">
-            <img src="/img/thumbs/53.jpg" alt="">
+        <div class="collapsed" id="photos-grid">
+            <div>
+                <img src="/img/thumbs/53.jpg" alt="">
+                <img class="grid-row-2" src="/img/thumbs/116.jpg" alt="">
+                <img src="/img/thumbs/96.jpg" alt="">
+                <img class="grid-row-2" src="/img/thumbs/98.jpg" alt="">
+                <img src="/img/thumbs/85.jpg" alt="">
+                <img src="/img/thumbs/117.jpg" alt="">
+                <img class="grid-row-2" src="/img/thumbs/3.jpg" alt="">
+                <img src="/img/thumbs/9.jpg" alt="">
+                <img class="grid-row-2" src="/img/thumbs/7.jpg" alt="">
+                <img src="/img/thumbs/6.jpg" alt="">
+                <img src="/img/thumbs/5.jpg" alt="">
+                <img src="/img/thumbs/2.jpg" alt="">
+            </div>
         </div>
 
         <div class="center">
-            <a class="button-link button-link-dark center" href="https://instagram.com/mikkelphoto_" target="_blank">
+            <a id="expand-button" href="/" onclick="return false;"><img src="/img/icons/down-arrow2.svg" alt=""></a>
+            <!-- <a class="button-link button-link-dark center" href="https://instagram.com/mikkelphoto_" target="_blank">
                 <img src="/img/icons/instagram-icon-light.png" alt="Instagram">
                 More on Instagram
-            </a>
+            </a> -->
         </div>
     </div>
 
@@ -102,7 +113,7 @@
                         </a>
                     </div>
                 </div>
-                
+
                 <div class="dev-project">
                     <img src="/img/icons/splitlist-banner.png" alt="Splitl.ist">
 
@@ -146,7 +157,7 @@
 
     <div class="section section-dark" id="cubing">
         <h2>Speedcubing</h2>
-        
+
         <div class="flexbox content">
             <div>
                 <p>Speedcubing is the activity of solving the <b>Rubik's cube</b> as quickly as possible. I first learnt how to solve the cube in 2014, and today I can do it in around <b>10 seconds</b>. I am ranked <b>top 10</b> in Norway in both the classic 3x3 cube, the smaller 2x2 variant as well as in one-handed solving.</p>
@@ -156,7 +167,7 @@
                 <iframe src="https://www.youtube.com/embed/3ccaVLiHrYs" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
         </div>
-        
+
         <div class="align">
             <a href="https://www.worldcubeassociation.org/persons/2014SVAR02" class="button-link" target="_blank">
                 <img src="/img/icons/wca-logo.svg" alt="WCA">
