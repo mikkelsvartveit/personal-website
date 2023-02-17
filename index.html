@@ -1,229 +1,351 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="description" content="Mikkel Svartveit - web development projects, photography portfolio, speedcubing and more.">
-    <meta name="keywords" content="Mikkel,Svartveit,developer,development,photographer,photography,speedcuber,speedcubing,cubing,portfolio">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="Mikkel Svartveit - web development projects, photography portfolio, speedcubing and more."
+    />
+    <meta
+      name="keywords"
+      content="Mikkel,Svartveit,developer,development,photographer,photography,speedcuber,speedcubing,cubing,portfolio"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Mikkel Svartveit</title>
 
-    <link rel="stylesheet" href="css/main.css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600&display=swap"
+      rel="stylesheet"
+    />
 
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
-</head>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+  </head>
 
-<body>
+  <body>
     <div id="start">
-        <div>
-            <img class="profile-image" src="/img/photos/portrait2.jpg" alt="Mikkel Svartveit">
-            <h1>Mikkel Svartveit</h1>
-            <div class="social-icons">
-                <a href="https://facebook.com/profile.php?id=100006609016880" target="_blank"><img src="/img/icons/facebook-icon.png" title="Facebook" alt="Facebook"></a>
+      <div>
+        <img
+          class="profile-image"
+          src="/img/photos/portrait2.jpg"
+          alt="Mikkel Svartveit"
+        />
+        <h1>Mikkel Svartveit</h1>
+        <div class="social-icons">
+          <a
+            href="https://facebook.com/profile.php?id=100006609016880"
+            target="_blank"
+          >
+            <img
+              src="/img/icons/facebook-icon.png"
+              title="Facebook"
+              alt="Facebook"
+            />
+          </a>
 
-                <a href="https://twitter.com/mikkelsvartveit" target="_blank"><img src="/img/icons/twitter-icon.png" title="Twitter" alt="Twitter"></a>
+          <a href="https://twitter.com/mikkelsvartveit" target="_blank">
+            <img
+              src="/img/icons/twitter-icon.png"
+              title="Twitter"
+              alt="Twitter"
+            />
+          </a>
 
-                <a href="https://instagram.com/mikkelsvartveit" target="_blank"><img src="/img/icons/instagram-icon.png" title="Instagram" alt="Instagram"></a>
+          <a href="https://instagram.com/mikkelsvartveit" target="_blank">
+            <img
+              src="/img/icons/instagram-icon.png"
+              title="Instagram"
+              alt="Instagram"
+            />
+          </a>
 
-                <a href="https://vsco.co/mikkelsvartveit" target="_blank"><img src="/img/icons/vsco-icon.png" title="VSCO" alt="VSCO"></a>
+          <a href="https://vsco.co/mikkelsvartveit" target="_blank">
+            <img src="/img/icons/vsco-icon.png" title="VSCO" alt="VSCO" />
+          </a>
 
-                <a href="https://github.com/mikkelsvartveit" target="_blank"><img src="/img/icons/github-icon.png" title="GitHub" alt="GitHub"></a>
-            </div>
+          <a href="https://github.com/mikkelsvartveit" target="_blank">
+            <img src="/img/icons/github-icon.png" title="GitHub" alt="GitHub" />
+          </a>
+        </div>
+      </div>
+
+      <div class="menu">
+        <div class="menu-row">
+          <a
+            href="#photography"
+            class="card"
+            onmouseover="this.firstElementChild.src = '/img/icons/photography-color.png';"
+            onmouseout="this.firstElementChild.src = '/img/icons/photography.png';"
+          >
+            <img src="/img/icons/photography.png" alt="Photography" />
+            <h3>Photography</h3>
+          </a>
+
+          <a
+            href="#development"
+            class="card"
+            onmouseover="this.firstElementChild.src = '/img/icons/development-color.png';"
+            onmouseout="this.firstElementChild.src = '/img/icons/development.png';"
+          >
+            <img src="/img/icons/development.png" alt="Development" />
+            <h3>Development</h3>
+          </a>
         </div>
 
-        <div class="menu">
-            <div class="menu-row">
-                <a href="#photography" class="card" onmouseover="this.firstElementChild.src = '/img/icons/photography-color.png';" onmouseout="this.firstElementChild.src = '/img/icons/photography.png';">
-                    <img src="/img/icons/photography.png" alt="Photography">
-                    <h3>Photography</h3>
-                </a>
+        <div class="menu-row">
+          <a
+            href="#cubing"
+            class="card"
+            onmouseover="this.firstElementChild.src = '/img/icons/speedcubing-color.png';"
+            onmouseout="this.firstElementChild.src = '/img/icons/speedcubing.png';"
+          >
+            <img src="/img/icons/speedcubing.png" alt="Rubik's Cube" />
+            <h3>Speedcubing</h3>
+          </a>
 
-                <a href="#development" class="card" onmouseover="this.firstElementChild.src = '/img/icons/development-color.png';" onmouseout="this.firstElementChild.src = '/img/icons/development.png';">
-                    <img src="/img/icons/development.png" alt="Development">
-                    <h3>Development</h3>
-                </a>
-            </div>
-
-            <div class="menu-row">
-                <a href="#cubing" class="card" onmouseover="this.firstElementChild.src = '/img/icons/speedcubing-color.png';" onmouseout="this.firstElementChild.src = '/img/icons/speedcubing.png';">
-                    <img src="/img/icons/speedcubing.png" alt="Rubik's Cube">
-                    <h3>Speedcubing</h3>
-                </a>
-
-                <a href="#about" class="card" onmouseover="this.firstElementChild.src = '/img/icons/contact-color.png';" onmouseout="this.firstElementChild.src = '/img/icons/contact.png';">
-                    <img src="/img/icons/contact.png" alt="About/Contact">
-                    <h3>Contact</h3>
-                </a>
-            </div>
+          <a
+            href="#about"
+            class="card"
+            onmouseover="this.firstElementChild.src = '/img/icons/contact-color.png';"
+            onmouseout="this.firstElementChild.src = '/img/icons/contact.png';"
+          >
+            <img src="/img/icons/contact.png" alt="About/Contact" />
+            <h3>Contact</h3>
+          </a>
         </div>
+      </div>
     </div>
 
     <div class="section section-dark" id="photography">
-        <h2>Photography</h2>
+      <h2>Photography</h2>
 
-        <div class="collapsed" id="photos-grid">
-            <div>
-                <img src="/img/thumbs/53.jpg" alt="">
-                <img class="grid-row-2" src="/img/thumbs/116.jpg" alt="">
-                <img src="/img/thumbs/96.jpg" alt="">
-                <img class="grid-row-2" src="/img/thumbs/98.jpg" alt="">
-                <img src="/img/thumbs/85.jpg" alt="">
-                <img src="/img/thumbs/117.jpg" alt="">
-                <img class="grid-row-2" src="/img/thumbs/3.jpg" alt="">
-                <img src="/img/thumbs/9.jpg" alt="">
-                <img class="grid-row-2" src="/img/thumbs/7.jpg" alt="">
-                <img src="/img/thumbs/6.jpg" alt="">
-                <img src="/img/thumbs/5.jpg" alt="">
-                <img src="/img/thumbs/2.jpg" alt="">
-            </div>
+      <div class="collapsed" id="photos-grid">
+        <div>
+          <img src="/img/thumbs/53.jpg" alt="" />
+          <img class="grid-row-2" src="/img/thumbs/116.jpg" alt="" />
+          <img src="/img/thumbs/96.jpg" alt="" />
+          <img class="grid-row-2" src="/img/thumbs/98.jpg" alt="" />
+          <img src="/img/thumbs/85.jpg" alt="" />
+          <img src="/img/thumbs/117.jpg" alt="" />
+          <img class="grid-row-2" src="/img/thumbs/3.jpg" alt="" />
+          <img src="/img/thumbs/9.jpg" alt="" />
+          <img class="grid-row-2" src="/img/thumbs/7.jpg" alt="" />
+          <img src="/img/thumbs/6.jpg" alt="" />
+          <img src="/img/thumbs/5.jpg" alt="" />
+          <img src="/img/thumbs/2.jpg" alt="" />
         </div>
+      </div>
 
-        <div class="center">
-            <a id="expand-button" href="/" onclick="return false;"><img src="/img/icons/down-arrow2.svg" alt=""></a>
-            <!-- <a class="button-link button-link-dark center" href="https://instagram.com/mikkelphoto_" target="_blank">
+      <div class="center">
+        <a id="expand-button" href="/" onclick="return false;">
+          <img src="/img/icons/down-arrow2.svg" alt="" />
+        </a>
+        <!-- <a class="button-link button-link-dark center" href="https://instagram.com/mikkelphoto_" target="_blank">
                 <img src="/img/icons/instagram-icon-light.png" alt="Instagram">
                 More on Instagram
             </a> -->
-        </div>
+      </div>
     </div>
 
     <div class="section" id="development">
-        <h2>Development</h2>
+      <h2>Development</h2>
 
-        <div class="content">
-            <div class="flexbox flex-wrap">
-                <div class="dev-project">
-                    <img src="/img/icons/splitlist-banner.png" alt="Splitlist">
+      <div class="content">
+        <div class="flexbox flex-wrap">
+          <div class="dev-project">
+            <img src="/img/icons/splitlist-banner.png" alt="Splitlist" />
 
-                    <h3>Splitlist</h3>
+            <h3>Splitlist</h3>
 
-                    <p>The fastest way to create and share to-do lists and more.</p>
+            <p>The fastest way to create and share to-do lists and more.</p>
 
-                    <div class="stack">
-                        <a href="http://splitlist.mikkelsvartveit.com" target="_blank" class="button-link">
-                            <img src="/img/icons/website-icon.png" alt="Website">
-                            Visit website
-                        </a>
-                        <a href="https://github.com/mikkelsvartveit/splitlist" target="_blank" class="button-link">
-                            <img src="/img/icons/github-icon.png" alt="GitHub">
-                            Code on GitHub
-                        </a>
-                    </div>
-                </div>
-
-                <div class="dev-project">
-                    <img src="/img/icons/glossary-tester-banner.png" alt="Glossary Tester">
-
-                    <h3>Glossary tester</h3>
-
-                    <p>A web app for learning and practicing glossary.</p>
-
-                    <div class="stack">
-                        <a href="http://glossary.mikkelsvartveit.com" target="_blank" class="button-link">
-                            <img src="/img/icons/website-icon.png" alt="Website">
-                            Visit website
-                        </a>
-                        <a href="https://github.com/mikkelsvartveit/glossary-tester" target="_blank" class="button-link">
-                            <img src="/img/icons/github-icon.png" alt="GitHub">
-                            Code on GitHub
-                        </a>
-                    </div>
-                </div>
-
-                <div class="dev-project">
-                    <img src="/img/icons/minesweeper-banner.png" alt="Minesweeper">
-
-                    <h3>Minesweeper</h3>
-
-                    <p>Basic implementation of Minesweeper in JavaFX.</p>
-
-                    <div class="stack">
-                        <a href="https://github.com/mikkelsvartveit/javafx-minesweeper" target="_blank" class="button-link">
-                            <img src="/img/icons/download-icon.svg" alt="Download">
-                            Download
-                        </a>
-                        <a href="https://github.com/mikkelsvartveit/javafx-minesweeper" target="_blank" class="button-link">
-                            <img src="/img/icons/github-icon.png" alt="GitHub">
-                            Code on GitHub
-                        </a>
-                    </div>
-                </div>
+            <div class="stack">
+              <a
+                href="http://splitlist.mikkelsvartveit.com"
+                target="_blank"
+                class="button-link"
+              >
+                <img src="/img/icons/website-icon.png" alt="Website" />
+                Visit website
+              </a>
+              <a
+                href="https://github.com/mikkelsvartveit/splitlist"
+                target="_blank"
+                class="button-link"
+              >
+                <img src="/img/icons/github-icon.png" alt="GitHub" />
+                Code on GitHub
+              </a>
             </div>
+          </div>
+
+          <div class="dev-project">
+            <img
+              src="/img/icons/glossary-tester-banner.png"
+              alt="Glossary Tester"
+            />
+
+            <h3>Glossary tester</h3>
+
+            <p>A web app for learning and practicing glossary.</p>
+
+            <div class="stack">
+              <a
+                href="http://glossary.mikkelsvartveit.com"
+                target="_blank"
+                class="button-link"
+              >
+                <img src="/img/icons/website-icon.png" alt="Website" />
+                Visit website
+              </a>
+              <a
+                href="https://github.com/mikkelsvartveit/glossary-tester"
+                target="_blank"
+                class="button-link"
+              >
+                <img src="/img/icons/github-icon.png" alt="GitHub" />
+                Code on GitHub
+              </a>
+            </div>
+          </div>
+
+          <div class="dev-project">
+            <img src="/img/icons/minesweeper-banner.png" alt="Minesweeper" />
+
+            <h3>Minesweeper</h3>
+
+            <p>Basic implementation of Minesweeper in JavaFX.</p>
+
+            <div class="stack">
+              <a
+                href="https://github.com/mikkelsvartveit/javafx-minesweeper"
+                target="_blank"
+                class="button-link"
+              >
+                <img src="/img/icons/download-icon.svg" alt="Download" />
+                Download
+              </a>
+              <a
+                href="https://github.com/mikkelsvartveit/javafx-minesweeper"
+                target="_blank"
+                class="button-link"
+              >
+                <img src="/img/icons/github-icon.png" alt="GitHub" />
+                Code on GitHub
+              </a>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
 
     <div class="section section-dark" id="cubing">
-        <h2>Speedcubing</h2>
+      <h2>Speedcubing</h2>
 
-        <div class="flexbox content">
-            <div>
-                <p>Speedcubing is the activity of solving the Rubik's cube as quickly as possible. I first learnt how to solve the cube in 2014, and today I can do it in around 10 seconds. I am ranked top 15 in Norway in both the classic 3x3 cube, the smaller 2x2 variant as well as in one-handed solving.</p>
-            </div>
-
-            <div class="iframe-container">
-                <iframe src="https://www.youtube.com/embed/3ccaVLiHrYs" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
+      <div class="flexbox content">
+        <div>
+          <p>
+            Speedcubing is the activity of solving the Rubik's cube as quickly
+            as possible. I first learnt how to solve the cube in 2014, and today
+            I can do it in around 10 seconds. I am ranked top 15 in Norway in
+            both the classic 3x3 cube, the smaller 2x2 variant as well as in
+            one-handed solving.
+          </p>
         </div>
 
-        <div class="align">
-            <a href="https://www.worldcubeassociation.org/persons/2014SVAR02" class="button-link" target="_blank">
-                <img src="/img/icons/wca-logo.svg" alt="WCA">
-                Records/rankings
-            </a>
-
-            <a href="https://www.youtube.com/channel/UCiJ7FdLKJSpGs1pqjqd7VnA" class="button-link" target="_blank">
-                <img src="/img/icons/youtube-logo.png" alt="YouTube">
-                More videos
-            </a>
+        <div class="iframe-container">
+          <iframe
+            src="https://www.youtube.com/embed/3KrGQf47fxc"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
         </div>
+      </div>
+
+      <div class="align">
+        <a
+          href="https://www.worldcubeassociation.org/persons/2014SVAR02"
+          class="button-link"
+          target="_blank"
+        >
+          <img src="/img/icons/wca-logo.svg" alt="WCA" />
+          Records/rankings
+        </a>
+
+        <a
+          href="https://www.youtube.com/channel/UCiJ7FdLKJSpGs1pqjqd7VnA"
+          class="button-link"
+          target="_blank"
+        >
+          <img src="/img/icons/youtube-logo.png" alt="YouTube" />
+          More videos
+        </a>
+      </div>
     </div>
 
     <div class="section section-darker" id="about">
-        <div class="flexbox content">
-            <!-- <div>
+      <div class="flexbox content">
+        <!-- <div>
                 <h2>About</h2>
             
                 <p>Hi! My name is Mikkel and I am an 18-year-old high school student from Norway. I am currently taking science classes, and I am aiming for a career within Computer Science. I have been interested in computers and coding since I was a kid, and over the years I have taught myself the basics of web development with HTML, CSS, JavaScript and PHP. I have also dabbled a bit in other programming languages such as Java and Python. Other hobbies of mine include tennis, photography and speedcubing.</p>
             </div> -->
 
-            <div id="contact">
-                <h2>Contact</h2>
+        <div id="contact">
+          <h2>Contact</h2>
 
-                <!-- <p>Do you have a question? Let me know.</p> -->
+          <!-- <p>Do you have a question? Let me know.</p> -->
 
-                <div class="stack">
-                    <a href="mailto:mail@mikkelsvartveit.com" target="_blank" class="button-link" id="email-button">
-                        <img src="/img/icons/email-icon.png" alt="Email">
-                        mail@mikkelsvartveit.com
-                    </a>
+          <div class="stack">
+            <a
+              href="mailto:mail@mikkelsvartveit.com"
+              target="_blank"
+              class="button-link"
+              id="email-button"
+            >
+              <img src="/img/icons/email-icon.png" alt="Email" />
+              mail@mikkelsvartveit.com
+            </a>
 
-                    <a href="https://www.facebook.com/messages/t/100006609016880" target="_blank" class="button-link">
-                        <img src="/img/icons/facebook-icon.png" alt="Facebook">
-                        Send message
-                    </a>
-                </div>
-            </div>
+            <a
+              href="https://www.facebook.com/messages/t/100006609016880"
+              target="_blank"
+              class="button-link"
+            >
+              <img src="/img/icons/facebook-icon.png" alt="Facebook" />
+              Send message
+            </a>
+          </div>
         </div>
+      </div>
     </div>
 
     <div id="photo-fullscreen" class="hidden">
-        <img src="data:," alt="">
-        <img src="/img/icons/x-icon.png" alt="Close" id="closePhotoButton" class="hidden">
+      <img src="data:," alt="" />
+      <img
+        src="/img/icons/x-icon.png"
+        alt="Close"
+        id="closePhotoButton"
+        class="hidden"
+      />
     </div>
 
     <div id="dim" class="hidden">
-        <img src="/img/icons/loading.svg" alt="Loading..." id="loading-icon" class="hidden">
+      <img
+        src="/img/icons/loading.svg"
+        alt="Loading..."
+        id="loading-icon"
+        class="hidden"
+      />
     </div>
 
     <a id="top-button" class="hidden" href="#start">
-        <img src="/img/icons/up-arrow.png" alt="Go to top">
+      <img src="/img/icons/up-arrow.png" alt="Go to top" />
     </a>
 
     <script src="/js/main.js"></script>
     <script src="/js/smoothscroll-polyfill.js"></script>
-</body>
-
+  </body>
 </html>
